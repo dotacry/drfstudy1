@@ -63,3 +63,7 @@ class WomenAPIView(APIView):
         # здесь код для удаления записи с переданным pk
 
         return Response({"post": "delete post " + str(pk)})
+
+class WomenAPIList(generics. ListCreateAPIView):
+    queryset = Women.objects.all()
+    serializer_class = WomenSerializer
